@@ -5,7 +5,6 @@ function calcIphone() {
     let iphoneHeight = 13.84
     let iphones = totalCm / iphoneHeight
     let roundedIphones = Math.ceil(iphones)
-    console.log(totalCm)
     document.getElementById('numOfIphones').innerHTML = roundedIphones
     document.getElementById('parentNumOfIphones').style.display = 'block'
     document.getElementById('iphoneImageDiv').innerHTML = ''
