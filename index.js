@@ -13,6 +13,3 @@ function calcIphone() {
             '<img src="iphone.png" width="10%" height="auto">'
     }
 }
-function hideEverything() {
-    document.getElementById('app').style.display = 'none'
-}
