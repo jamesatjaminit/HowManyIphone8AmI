@@ -21,7 +21,13 @@
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
         <script src="index.js"></script>
     </head>
-    <body class="bg-dark text-light">
+    <body class="bg-light text-light">
+        <script>
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.value = 'bg-dark text-light'
+                $('#toggle-event').bootstrapToggle('on')
+            }
+        </script>
         <noscript> You need javascript to run this app! </noscript>
         <div id="app" style="display: none">
             <br />
@@ -81,10 +87,9 @@
         </script>
         <script>
             $(function () {
-                $('#toggle-event').bootstrapToggle({
-                    on: 'Dark',
-                    off: 'Light',
-                })
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    $('#toggle-event').bootstrapToggle('on')
+                }
                 $('#toggle-event').change(function () {
                     if (document.body.classList.value == 'bg-dark text-light') {
                         document.body.classList.value = 'bg-light text-dark'
