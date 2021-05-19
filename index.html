@@ -25,7 +25,6 @@
         <script>
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 document.body.classList.value = 'bg-dark text-light'
-                $('#toggle-event').bootstrapToggle('on')
             }
         </script>
         <noscript> You need javascript to run this app! </noscript>
@@ -92,7 +91,7 @@
         />
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
         <script>
-            window.onload = $(function () {
+            window.onload = function () {
                 document.getElementById('app').style.display = 'block'
                 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     $('#toggle-event').bootstrapToggle('on')
@@ -106,7 +105,7 @@
                         document.body.classList.value = 'bg-dark text-light'
                     }
                 })
-            })
+            }
         </script>
     </body>
 </html>
