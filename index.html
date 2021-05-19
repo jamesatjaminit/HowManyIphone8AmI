@@ -89,6 +89,8 @@
             $(function () {
                 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     $('#toggle-event').bootstrapToggle('on')
+                } else {
+                    $('#toggle-event').bootstrapToggle('off')
                 }
                 $('#toggle-event').change(function () {
                     if (document.body.classList.value == 'bg-dark text-light') {
