@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+            crossorigin="anonymous"
+        />
+        <script src="index.js"></script>
+    </head>
+    <body class="bg-dark text-light">
+        <noscript> You need javascript to run this app! </noscript>
+        <div id="app" style="display: none">
+            <br />
+            <div class="container">
+                <h1>How many Iphone 8's Am I?</h1>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="inputFeet" class="form-label">Feet:</label>
+                        <input
+                            type="number"
+                            id="inputFeet"
+                            class="form-control"
+                            aria-describedby="inputTextHint"
+                        /><br />
+                        <label for="inputInches" class="form-label"
+                            >Inches:</label
+                        >
+                        <input
+                            type="number"
+                            id="inputInches"
+                            class="form-control"
+                            aria-describedby="inputTextHint"
+                        />
+
+                        <div id="inputTextHint" class="form-text">
+                            Enter your height
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="calcIphone()">
+                        Iphone me
+                    </button>
+                </div>
+                <h2 style="display: none" id="parentNumOfIphones">
+                    You are <span id="numOfIphones"></span> Iphone 8's tall!
+                </h2>
+            </div>
+            <div id="iphoneImageDiv"></div>
+        </div>
+        <br /><br />
+        <footer>&copy; James Cook 2021</footer>
+        <script>
+            window.onload = document.getElementById('app').style.display =
+                'block'
+        </script>
+    </body>
+</html>
