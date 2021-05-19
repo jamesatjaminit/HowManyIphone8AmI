@@ -9,7 +9,17 @@
             integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
             crossorigin="anonymous"
         />
-        <script src="index.js" async></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+        <script src="index.js"></script>
     </head>
     <body class="bg-dark text-light">
         <noscript> You need javascript to run this app! </noscript>
@@ -51,12 +61,38 @@
             </div>
             <div id="iphoneImageDiv"></div>
             <br /><br />
-            <footer>&copy; James Cook 2021</footer>
+            <div class="container">
+                <input
+                    type="checkbox"
+                    checked
+                    data-toggle="toggle"
+                    id="toggle-event"
+                    data-on="Dark"
+                    data-off="Light"
+                />
+                <footer onclick="hideEverything()">
+                    &copy; James Cook 2021
+                </footer>
+            </div>
         </div>
-
         <script>
             window.onload = document.getElementById('app').style.display =
                 'block'
+        </script>
+        <script>
+            $(function () {
+                $('#toggle-event').bootstrapToggle({
+                    on: 'Dark',
+                    off: 'Light',
+                })
+                $('#toggle-event').change(function () {
+                    if (document.body.classList.value == 'bg-dark text-light') {
+                        document.body.classList.value = 'bg-light text-dark'
+                    } else {
+                        document.body.classList.value = 'bg-dark text-light'
+                    }
+                })
+            })
         </script>
     </body>
 </html>
