@@ -1,6 +1,8 @@
 function calcIphone() {
     let feet = document.getElementById('inputFeet').value
+    if (!feet) return
     let inches = document.getElementById('inputInches').value
+    if (!inches) document.getElementById('inputInches').value = 0
     let totalCm = feet * 30.48 + inches * 2.54 // Convert foot and inches to cm
     let iphoneHeight = 13.84 // Height of an iphone 8
     let iphones = totalCm / iphoneHeight // Work out numbers of iphones
