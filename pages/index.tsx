@@ -19,7 +19,7 @@ const Home: NextPage = () => {
   }
   return (
     <Container sx={{ mt: 3 }}>
-      <Typography variant="h2">How Many Iphone 8's Am I?</Typography>
+      <Typography variant="h2">How Many Iphone 8&apos;s Am I?</Typography>
       <form onSubmit={formSubmit}>
         <Grid container spacing={5} sx={{ pt: 3 }}>
           <Grid item>
